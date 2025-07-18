@@ -18,7 +18,7 @@ btn.onclick = () => {
 
   if (input === randomNum) {
     message.textContent = `🎉 Correct! The number was ${randomNum}`
-    btn.disabled = true // disable button after win
+    btn.disabled = true
   } else if (input > randomNum) {
     message.textContent = '📉 Too high!'
   } else if (input < randomNum) {
