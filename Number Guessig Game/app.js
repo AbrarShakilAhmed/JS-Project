@@ -1,32 +1,29 @@
 let min = 1
 let max = 100
-let randomNumber = Math.round(Math.random() * 100)
-console.log(randomNumber)
-let gusess
-let attems = 0
+let randomNum = Math.floor(Math.random() * (max - min + 1)) + min
+let attempts = 0
 
-while (true) {
-  gusess = parseInt(prompt(`Enter a number Between ${min} - ${max}`))
+const btn = document.querySelector('.btn')
+const message = document.getElementById('message')
+const attemptsMsg = document.getElementById('attems')
 
-  if (gusess > 100) {
-    alert('Please enter a number between 100 ...')
-    attems++
-  } else if (gusess < 1) {
-    alert('Please enter a number between 1 to  100 ...')
-    attems++
-  } else if (!gusess) {
-    alert('enter a valid number')
-    attems++
-  } else {
-    attems++
-    if (gusess > randomNumber) {
-      alert('Number is too big')
-      console.log(gusess)
-    } else if (gusess < randomNumber) {
-      alert('Number is too low')
-    } else {
-      alert(`currect your ans was ${randomNumber} and attems is ${attems}`)
-      break
-    }
+btn.onclick = () => {
+  let input = Number(document.getElementById('number').value)
+  attempts++
+
+  if (!input || input < min || input > max) {
+    message.textContent = '❗ Please enter a number between 1 and 100'
+    return
   }
+
+  if (input === randomNum) {
+    message.textContent = `🎉 Correct! The number was ${randomNum}`
+    btn.disabled = true // disable button after win
+  } else if (input > randomNum) {
+    message.textContent = '📉 Too high!'
+  } else if (input < randomNum) {
+    message.textContent = '📈 Too low!'
+  }
+
+  attemptsMsg.textContent = `Attempts: ${attempts}`
 }
