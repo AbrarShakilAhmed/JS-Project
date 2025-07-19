@@ -1,5 +1,1 @@
-function printArr(...food) {
-  console.log(...food)
-}
-
-printArr('aple', 'banana')
+console.log(Math.floor(Math.random() * 3))
