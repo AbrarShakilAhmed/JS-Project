@@ -1,2 +1,5 @@
-let arr = [...[2, 4, 4], ...['3']]
-console.log(arr)
+function printArr(...food) {
+  console.log(...food)
+}
+
+printArr('aple', 'banana')
