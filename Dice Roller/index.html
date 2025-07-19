@@ -12,8 +12,17 @@
       rel="stylesheet"
       href="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container bg-"></div>
+    <div class="container mt-4 text-center">
+      <h1 class="mb-4">Dice Roller Program</h1>
+      <input type="number" id="num" value="1" min="1" />
+      <button id="btn">Roll</button>
+      <p id="roll"># dice</p>
+      <div id="dice-total"></div>
+      <div id="dice-img"></div>
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>
