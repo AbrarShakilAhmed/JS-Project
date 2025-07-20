@@ -61,7 +61,7 @@ span {
 }
 @keyframes fade {
   from {
-    translate: 0 300px;
+    translate: 0 100px;
     opacity: 0.1;
   }
   to {

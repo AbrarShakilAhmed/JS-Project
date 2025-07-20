@@ -7,7 +7,7 @@ function passGenarator() {
   let allowedpass = ''
   let passLength = parseInt(document.getElementById('passlength').value)
 
-  document.getElementById('uppercase')
+  document.getElementById('uppercase').checked
     ? (allowedpass += charcter.toLocaleUpperCase())
     : ''
   document.getElementById('lowercase').checked ? (allowedpass += charcter) : ''
