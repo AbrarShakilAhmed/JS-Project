@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="logo">Symsung</div>
+      <div class="solar-panel">
+        <div class="hr"></div>
+        <div class="hr"></div>
+        <div class="hr"></div>
+        <div class="hr"></div>
+      </div>
+      <input type="text" readonly class="display" />
+      <div class="calculator-btn">
+        <div class="calculator-fun">
+          <button class="clear" onclick="Clear()">C</button>
+          <button class="clear" onclick="Clear()">C/A</button>
+          <button onclick="Addelement('+')">+</button>
+          <button onclick="Addelement('-')">-</button>
+          <button onclick="Addelement('*')">*</button>
+          <button onclick="Addelement('/')">/</button>
+          <button onclick="Addelement('%')">%</button>
+          <button onclick="Addelement('**')">^</button>
+        </div>
+        <div class="number">
+          <button onclick="Addelement('1')">1</button>
+          <button onclick="Addelement('2')">2</button>
+          <button onclick="Addelement('3')">3</button>
+          <button onclick="Addelement('4')">4</button>
+          <button onclick="Addelement('5')">5</button>
+          <button onclick="Addelement('6')">6</button>
+          <button onclick="Addelement('7')">7</button>
+          <button onclick="Addelement('8')">8</button>
+          <button onclick="Addelement('9')">9</button>
+          <button onclick="Addelement('0')">0</button>
+          <button onclick="Addelement('.')">.</button>
+          <button onclick="Ans()">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
